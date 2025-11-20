@@ -14,7 +14,7 @@
 // for the client
 #if RUNNING_AS_CLIENT
 #define ENABLE_LE_CENTRAL
-#define MAX_NR_GATT_CLIENTS 1
+#define MAX_NR_GATT_CLIENTS 4
 #else
 #define MAX_NR_GATT_CLIENTS 0
 #endif
@@ -23,10 +23,19 @@
 #define HCI_OUTGOING_PRE_BUFFER_SIZE 4
 #define HCI_ACL_PAYLOAD_SIZE (255 + 4)
 #define HCI_ACL_CHUNK_SIZE_ALIGNMENT 4
-#define MAX_NR_HCI_CONNECTIONS 1
-#define MAX_NR_SM_LOOKUP_ENTRIES 3
+#define MAX_NR_HCI_CONNECTIONS 4
+#define MAX_NR_SM_LOOKUP_ENTRIES 4
 #define MAX_NR_WHITELIST_ENTRIES 16
 #define MAX_NR_LE_DEVICE_DB_ENTRIES 16
+
+#define MAX_NR_BTSTACK_LINK_KEY_DB_MEMORY_ENTRIES 4
+#define MAX_NR_ATT_SERVER_CONNECTIONS 4
+#define MAX_NR_L2CAP_SERVICES 4
+#define MAX_NR_L2CAP_CHANNELS 8
+#define MAX_NR_LE_CONNECTIONS 4
+#define MAX_NR_BLE_ADV_SET 1   // Most boards only support 1 anyway
+
+
 
 // Limit number of ACL/SCO Buffer to use by stack to avoid cyw43 shared bus overrun
 #define MAX_NR_CONTROLLER_ACL_BUFFERS 3

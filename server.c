@@ -181,6 +181,8 @@ restart:
     btstack_run_loop_set_timer(&heartbeat, HEARTBEAT_PERIOD_MS);
     btstack_run_loop_add_timer(&heartbeat);
 
+    gap_set_max_number_peripheral_connections(4);
+
     // turn on bluetooth!
     hci_power_control(HCI_POWER_ON);
 
