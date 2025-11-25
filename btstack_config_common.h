@@ -30,12 +30,10 @@
 
 #define MAX_NR_BTSTACK_LINK_KEY_DB_MEMORY_ENTRIES 4
 #define MAX_NR_ATT_SERVER_CONNECTIONS 4
-#define MAX_NR_L2CAP_SERVICES 4
-#define MAX_NR_L2CAP_CHANNELS 8
+#define MAX_NR_L2CAP_SERVICES 8
+#define MAX_NR_L2CAP_CHANNELS 16
 #define MAX_NR_LE_CONNECTIONS 4
 #define MAX_NR_BLE_ADV_SET 1   // Most boards only support 1 anyway
-
-
 
 // Limit number of ACL/SCO Buffer to use by stack to avoid cyw43 shared bus overrun
 #define MAX_NR_CONTROLLER_ACL_BUFFERS 3
@@ -53,7 +51,7 @@
 #define NVM_NUM_LINK_KEYS 16
 
 // We don't give btstack a malloc, so use a fixed-size ATT DB.
-#define MAX_ATT_DB_SIZE 512
+#define MAX_ATT_DB_SIZE 2048
 
 // BTstack HAL configuration
 #define HAVE_EMBEDDED_TIME_MS
